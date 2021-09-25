@@ -1,0 +1,10 @@
+.person-img{
+    width: 130px;
+    height: 200px;
+
+}
+.row-shadow{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
