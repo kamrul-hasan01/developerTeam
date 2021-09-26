@@ -12,17 +12,19 @@ const Person = (props) => {
     const { name, Skill, sallery, age, img, projectCompete } = props.member;
 
     return (
-        <div className="col-md-4 p-5 ">
-            <div className="row g-0 row-shadow  bg-white">
-                <div className="col-md-6 ">
-                    <img src={img} className="person-img" alt="" />
+        <div className="col-md-4 px-2 py-3">
+            <div className=" row-shadow  bg-white">
+                <div className="">
+                    <img src={img} className="person-img p-0" alt="" />
                 </div>
-                <div className="col-md-6 text-start">
+                <div className="">
                     <h5>{name}</h5>
                     <p>Skill : {Skill}</p>
-                    <p>Salary :{sallery} $</p>
+                    <div className="d-flex justify-content-center">
+                        <p>Salary :{sallery}$ |</p>
 
-                    <p>Age:{age}</p>
+                        <p>|  Age:{age}</p>
+                    </div>
                     <p>Project Finish  : {projectCompete} {checkIcon}</p>
 
 

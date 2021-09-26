@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
+import { faPlayCircle, faUserCheck, faTasks } from '@fortawesome/free-solid-svg-icons';
 import MeetingMembers from '../MeetingMembers/MeetingMembers';
 import Person from '../Person/Person';
 import './Team.css'
@@ -8,7 +8,10 @@ import './Team.css'
 
 
 const Team = () => {
+    //  font awesome icon   set
     const meetingButtonIcon = <FontAwesomeIcon icon={faPlayCircle}></FontAwesomeIcon>
+    const userIcon = <FontAwesomeIcon icon={faUserCheck}></FontAwesomeIcon>
+    const taskIcon = <FontAwesomeIcon icon={faTasks}></FontAwesomeIcon>
 
     // for member 
     const [members, setMembers] = useState([]);
@@ -43,31 +46,39 @@ const Team = () => {
     }, [])
 
     return (
-        <div className="background-set">
+        <div className="background-set ">
 
 
-            <div className="d-flex justify-content-center">
-                <div className="col-md-5  custom-style  bg-white">
-                    <h2>Team member list for meeting</h2>
-                    <h4>Total Member : <span className="text-info">{meeting.length}</span> & Sum of Salary : <span className="text-info">{totalProject}</span> </h4>
-
-                    <div className="row px-4 d-flex jusify-content-center">
-                        {
-                            meeting.map(meet => <MeetingMembers
-                                meet={meet}></MeetingMembers>)
-                        }
+            <div className="container">
+                <div className="row g-0">
+                    <div className="col-md-8">
+                        <div className="row g-0">
+                            {
+                                members.map(member => <Person
+                                    member={member}
+                                    key={member.key} addMember={addMember}></Person>)
+                            }
+                        </div>
                     </div>
-                    <button type="button" className="btn btn-outline-info bg-info text-white w-50 rounded" >{meetingButtonIcon} <span className="mx-1">Start Meeting</span> </button>
+                    <div className="col-md-4">
+                        <div className="col-md-12  custom-style  bg-light ms-5 sticky-top">
+                            <h2 className="shadow-lg p-2 rounded bg-white">List for Meeting</h2>
+                            <h4 >{userIcon}Total Member : <span className="text-info">{meeting.length}</span> </h4>
+                            <h4 >{taskIcon} Total Project : <span className="text-info">{totalProject}</span> </h4>
 
+                            <div className="row px-4 d-flex jusify-content-center">
+                                {
+                                    meeting.map(meet => <MeetingMembers
+                                        meet={meet}></MeetingMembers>)
+                                }
+                            </div>
+                            <button type="button" className="btn btn-outline-info bg-info text-white w-50 rounded" >{meetingButtonIcon} <span className="mx-1">Start Meeting</span> </button>
+
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div className="row g-0">
-                {
-                    members.map(member => <Person
-                        member={member}
-                        key={member.key} addMember={addMember}></Person>)
-                }
+
             </div>
         </div>
     );
