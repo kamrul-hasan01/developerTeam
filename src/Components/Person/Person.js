@@ -33,7 +33,7 @@ const Person = (props) => {
 
                 </div>
                 <div className="d-flex justify-content-center">
-                    <button type="button" className="btn btn-outline-info bg-info text-white w-50" onClick={() => props.addMember(name, projectCompete)}>{buttonIcon} <span className="ms-1">ADD to Meeting</span> </button>
+                    <button type="button" className="btn btn-outline-info bg-info text-white w-75" onClick={() => props.addMember(name, projectCompete)}>{buttonIcon} <span className="ms-1">ADD Meeting</span> </button>
                 </div>
             </div>
 
