@@ -6,22 +6,32 @@ import './Team.css'
 
 
 const Team = () => {
-    let pre = 0;
-    // let totalSalary = 0;
+
+
     const [members, setMembers] = useState([]);
     const [meeting, setMeeting] = useState([]);
-    const [totalSalary, setTotalSalary] = useState(0);
+    const [salaryArray, setSalaryArray] = useState([]);
 
     const addMember = (name, salary) => {
 
-        console.log(salary)
-        pre = pre + salary;
-        console.log(pre)
-        setTotalSalary(pre)
+
+
+        const value = [...salaryArray, salary];
+
+
+
+        setSalaryArray(value)
+
         const newMember = [...meeting, name];
         setMeeting(newMember);
 
+
     }
+    let totalSalary = 0;
+    salaryArray.forEach(x => {
+        totalSalary += x;
+
+    })
 
 
 
@@ -30,15 +40,15 @@ const Team = () => {
             .then(res => res.json())
             .then(data => {
                 setMembers(data)
-                console.log(data)
+
             })
     }, [])
 
     return (
-        <div>
+        <div className="background-set">
 
             <div className="d-flex justify-content-center">
-                <div className="col-md-3  custom-style">
+                <div className="col-md-3  custom-style  bg-white">
                     <h2>Total Member :{meeting.length}</h2>
                     <h2>Sum of Salary :{totalSalary}</h2>
                     <div className="col-md-8">
@@ -47,7 +57,7 @@ const Team = () => {
                                 meet={meet}></MeetingMembers>)
                         }
                     </div>
-                    {/* <button className="m-5">Call now</button> */}
+
                 </div>
             </div>
 

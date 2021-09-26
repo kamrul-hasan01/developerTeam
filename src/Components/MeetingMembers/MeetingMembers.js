@@ -1,10 +1,11 @@
 import React from 'react';
+import './MeetingMembers.css'
 
 const MeetingMembers = (props) => {
 
     const { meet } = props;
     return (
-        <ul>
+        <ul >
             <li>
                 Name :{meet}
             </li>
