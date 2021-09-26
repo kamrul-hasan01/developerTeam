@@ -41,6 +41,7 @@ const Team = () => {
             .then(res => res.json())
             .then(data => {
                 setMembers(data)
+                console.log(data)
 
             })
     }, [])

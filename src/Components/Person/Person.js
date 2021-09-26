@@ -1,15 +1,16 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faVideo, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { faVideo, faCheckCircle, faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 import './Persion.css'
 
 const Person = (props) => {
     // font awesome icon set 
     const buttonIcon = <FontAwesomeIcon icon={faVideo}></FontAwesomeIcon>
     const checkIcon = <FontAwesomeIcon icon={faCheckCircle}></FontAwesomeIcon>
+    const emailIcon = <FontAwesomeIcon icon={faEnvelopeSquare}></FontAwesomeIcon>
 
     // distructure
-    const { name, Skill, sallery, age, img, projectCompete } = props.member;
+    const { name, Skill, sallery, age, img, projectCompete, email } = props.member;
 
     return (
         <div className="col-md-4 px-2 py-3">
@@ -25,6 +26,7 @@ const Person = (props) => {
 
                         <p>|  Age:{age}</p>
                     </div>
+                    <p className="cursor-zoom-in">{emailIcon} {email}</p>
                     <p>Project Finish  : {projectCompete} {checkIcon}</p>
 
 
