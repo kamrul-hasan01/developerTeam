@@ -6,8 +6,8 @@ const Header = () => {
             <h3 className="fs-1 fw-bolder">Web Developer Team</h3>
             <p><small className="fw-lighter">“Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.” – Antoine de Saint-Exupery</small></p>
 
-            <h5 className="fw-light">Meet our awesome team members.</h5>
-            <p className="fs-2">Total project : 180</p>
+
+            <p className="fs-2">Total project : 520</p>
 
         </div>
     );

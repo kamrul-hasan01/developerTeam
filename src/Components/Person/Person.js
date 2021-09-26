@@ -1,12 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faVideo, faCheckCircle, faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
+import { faVideo, faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 import './Persion.css'
 
 const Person = (props) => {
     // font awesome icon set 
     const buttonIcon = <FontAwesomeIcon icon={faVideo}></FontAwesomeIcon>
-    const checkIcon = <FontAwesomeIcon icon={faCheckCircle}></FontAwesomeIcon>
+
     const emailIcon = <FontAwesomeIcon icon={faEnvelopeSquare}></FontAwesomeIcon>
 
     // distructure
@@ -27,8 +27,8 @@ const Person = (props) => {
 
                         <p>|  Age:{age}</p>
                     </div>
-                    <p > <span className="text-primary">{emailIcon}</span> {email}</p>
-                    <p>Project Finish  : {projectCompete} <span className="text-primary">{checkIcon}</span></p>
+                    <p > <span className="text-info fs-5">{emailIcon}</span> {email}</p>
+                    <p>Project Finish  : {projectCompete}</p>
 
 
                 </div>

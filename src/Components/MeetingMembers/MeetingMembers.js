@@ -10,8 +10,8 @@ const MeetingMembers = (props) => {
     const { meet } = props;
 
     return (
-        <div className="col-md-6">
-            <p>{userIcon}<span className="ps-1">{meet}</span></p>
+        <div className="col-md-12">
+            <p className="shadow-lg bg-white text-start ps-5 fs-5">{userIcon}<span className="ps-1">{meet}</span></p>
         </div>
 
     );

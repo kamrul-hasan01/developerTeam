@@ -21,10 +21,14 @@ const Team = () => {
     const [projectArray, setProjectArray] = useState([]);
 
     const addMember = (name, salary) => {
-        const newArray = [...projectArray, salary];
-        setProjectArray(newArray)
-        const newMember = [...meeting, name];
-        setMeeting(newMember);
+        if (!meeting.includes(name)) {
+            const newArray = [...projectArray, salary];
+            setProjectArray(newArray)
+            const newMember = [...meeting, name];
+            setMeeting(newMember);
+        }
+
+
 
 
     }
