@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import MeetingMembers from '../MeetingMembers/MeetingMembers';
 import Person from '../Person/Person';
 import './Team.css'
@@ -6,6 +8,8 @@ import './Team.css'
 
 
 const Team = () => {
+    const meetingButtonIcon = <FontAwesomeIcon icon={faPlayCircle}></FontAwesomeIcon>
+
     // for member 
     const [members, setMembers] = useState([]);
     // meeting people add 
@@ -53,6 +57,7 @@ const Team = () => {
                                 meet={meet}></MeetingMembers>)
                         }
                     </div>
+                    <button type="button" className="btn btn-outline-info bg-info text-white w-50 rounded" >{meetingButtonIcon} <span className="mx-1">Start Meeting</span> </button>
 
                 </div>
             </div>
