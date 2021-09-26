@@ -6,30 +6,24 @@ import './Team.css'
 
 
 const Team = () => {
-
-
+    // for member 
     const [members, setMembers] = useState([]);
+    // meeting people add 
     const [meeting, setMeeting] = useState([]);
-    const [salaryArray, setSalaryArray] = useState([]);
+    //  set project  array 
+    const [projectArray, setProjectArray] = useState([]);
 
     const addMember = (name, salary) => {
-
-
-
-        const value = [...salaryArray, salary];
-
-
-
-        setSalaryArray(value)
-
+        const newArray = [...projectArray, salary];
+        setProjectArray(newArray)
         const newMember = [...meeting, name];
         setMeeting(newMember);
 
 
     }
-    let totalSalary = 0;
-    salaryArray.forEach(x => {
-        totalSalary += x;
+    let totalProject = 0;
+    projectArray.forEach(x => {
+        totalProject += x;
 
     })
 
@@ -47,11 +41,13 @@ const Team = () => {
     return (
         <div className="background-set">
 
+
             <div className="d-flex justify-content-center">
-                <div className="col-md-3  custom-style  bg-white">
-                    <h2>Total Member :{meeting.length}</h2>
-                    <h2>Sum of Salary :{totalSalary}</h2>
-                    <div className="col-md-8">
+                <div className="col-md-5  custom-style  bg-white">
+                    <h2>Team member list for meeting</h2>
+                    <h4>Total Member : <span className="text-info">{meeting.length}</span> & Sum of Salary : <span className="text-info">{totalProject}</span> </h4>
+
+                    <div className="row px-4 d-flex jusify-content-center">
                         {
                             meeting.map(meet => <MeetingMembers
                                 meet={meet}></MeetingMembers>)

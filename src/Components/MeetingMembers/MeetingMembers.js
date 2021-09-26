@@ -3,13 +3,13 @@ import './MeetingMembers.css'
 
 const MeetingMembers = (props) => {
 
+
     const { meet } = props;
+
     return (
-        <ul >
-            <li>
-                Name :{meet}
-            </li>
-        </ul>
+        <div className="col-md-4">
+            <p>{meet}</p>
+        </div>
 
     );
 };

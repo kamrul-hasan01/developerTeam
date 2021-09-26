@@ -4,9 +4,11 @@ import { faVideo, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import './Persion.css'
 
 const Person = (props) => {
+    // font awesome icon set 
     const buttonIcon = <FontAwesomeIcon icon={faVideo}></FontAwesomeIcon>
     const checkIcon = <FontAwesomeIcon icon={faCheckCircle}></FontAwesomeIcon>
 
+    // distructure
     const { name, Skill, sallery, age, img, projectCompete } = props.member;
 
     return (
@@ -26,7 +28,7 @@ const Person = (props) => {
 
                 </div>
                 <div className="d-flex justify-content-center">
-                    <button type="button" className="btn btn-outline-info bg-info text-white w-75" onClick={() => props.addMember(name, sallery)}>{buttonIcon} <span className="mx-1">ADD to Meeting</span> </button>
+                    <button type="button" className="btn btn-outline-info bg-info text-white w-75" onClick={() => props.addMember(name, projectCompete)}>{buttonIcon} <span className="mx-1">ADD to Meeting</span> </button>
                 </div>
             </div>
 
