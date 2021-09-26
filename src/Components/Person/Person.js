@@ -17,22 +17,23 @@ const Person = (props) => {
             <div className=" row-shadow  bg-white">
                 <div className="">
                     <img src={img} className="person-img p-0" alt="" />
+
                 </div>
                 <div className="">
-                    <h5>{name}</h5>
+                    <h5 className="pt-2">{name}</h5>
                     <p>Skill : {Skill}</p>
                     <div className="d-flex justify-content-center">
                         <p>Salary :{sallery}$ |</p>
 
                         <p>|  Age:{age}</p>
                     </div>
-                    <p className="cursor-zoom-in">{emailIcon} {email}</p>
-                    <p>Project Finish  : {projectCompete} {checkIcon}</p>
+                    <p > <span className="text-primary">{emailIcon}</span> {email}</p>
+                    <p>Project Finish  : {projectCompete} <span className="text-primary">{checkIcon}</span></p>
 
 
                 </div>
                 <div className="d-flex justify-content-center">
-                    <button type="button" className="btn btn-outline-info bg-info text-white w-75" onClick={() => props.addMember(name, projectCompete)}>{buttonIcon} <span className="mx-1">ADD to Meeting</span> </button>
+                    <button type="button" className="btn btn-outline-info bg-info text-white w-50" onClick={() => props.addMember(name, projectCompete)}>{buttonIcon} <span className="ms-1">ADD to Meeting</span> </button>
                 </div>
             </div>
 
