@@ -8,9 +8,9 @@
 
 ### `Website details`
 <br>
- 1. you can see your developers.
+ 1. You can see all the members of a company's developer team together.
  <br>
- 2.You can see developers details.
+ 2.You can know the details of the developers.
  <br>
- 3.You can add them randomly for meeting.
+ 3. You can select some of the developers and hold a meeting.
 
